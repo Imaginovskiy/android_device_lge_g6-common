@@ -23,7 +23,8 @@ $(call inherit-product, device/lge/msm8996-common/msm8996.mk)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Boot animation
-TARGET_BOOT_ANIMATION_RES := 1440
+TARGET_SCREEN_HEIGHT := 2880
+TARGET_SCREEN_WIDTH := 1440
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -39,8 +40,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.lucye \
-    android.hardware.light@2.0-impl
+    android.hardware.light@2.0-service.lucye 
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -49,6 +49,3 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_lucye.conf:system/etc/sensors/sensor_def_common.conf
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.lights=h870_sys
