@@ -40,7 +40,8 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.lucye 
+    android.hardware.light@2.0-service \
+    android.hardware.light@2.0-impl
 
 # Media
 PRODUCT_COPY_FILES += \
